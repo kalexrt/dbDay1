@@ -18,11 +18,7 @@ CREATE TABLE Orders (
 INSERT INTO Products (product_id, product_name, category, price)
 VALUES
 (1, 'Laptop', 'Electronics', 1000),
-<<<<<<< HEAD
 (2, 'Smartphone', 'Electronics', 500),
-=======
-(2, 'Smartphone', 'Electronics', 500,
->>>>>>> 2ae329b94bc47c7633dafb2df883b63cb5123d55
 (3, 'Tablet', 'Electronics', 300);
 
 -- Inserting data into Orders table
@@ -31,7 +27,10 @@ VALUES
 (1, 'Alice', 1, 2, '2024-07-01'),
 (2, 'Bob', 2, 1, '2024-07-02'),
 (3, 'Charlie', 3, 3, '2024-07-03');
-<<<<<<< HEAD
+
+--Read from tables
+SELECT * FROM Orders
+SELECT * FROM Products
 
 --Calculate the total quantity ordered for each product category in the orders table.
 SELECT p.category, SUM(o.quantity) AS total_quantity_ordered
@@ -45,5 +44,3 @@ FROM Orders o
 JOIN Products p ON o.product_id = p.product_id
 GROUP BY p.product_name
 HAVING SUM(o.quantity) > 5;
-=======
->>>>>>> 2ae329b94bc47c7633dafb2df883b63cb5123d55
